@@ -124,3 +124,15 @@ PS C:/the-project> yarn install
   Open in browser
     http://localhost:8081/debugger-ui/
 
+-------------------------------
+
+## Possible Errors and Fixes
+
+ERROR - EADDRINUSE: address already in use :::8081
+  
+  FIX - npx kill-port 8081
+
+
+ERROR - java.util.concurrent.ExecutionException: com.android.builder.testing.api.DeviceException: com.android.ddmlib.InstallException: INSTALL_FAILED_CONFLICTING_PROVIDER: Scanning Failed.: Can't install because provider name com.facebook.app.FacebookContentProvider355198514515820 (in package com.STEENHANSEN.FONECOOK3) is already used by com.steenhansen.phonerecipes
+
+  FIX - adb uninstall com.STEENHANSEN.FONECOOK3
