@@ -17,10 +17,10 @@ Firebase React Native bindings are not used, but are left in place.
 -------------------------------
 
 ## Step A
-Create /android/app/debug.keystore with keytool.exe
+Create C:/the-project/android/app/debug.keystore with keytool.exe
 
 ```bash
-PS C:\android\app> keytool -genkeypair -v -storetype PKCS12 -keystore debug.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
+PS C:/the-project/android/app> keytool -genkeypair -v -storetype PKCS12 -keystore debug.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
 Enter keystore password:yer-keystore-password
 ```
 Put 'yer-keystore-password' into /keystore.REAL.properties twice 
@@ -30,7 +30,7 @@ Put 'yer-keystore-password' into /keystore.REAL.properties twice
 Get SHA1 and SHA256 values of keystore
 
 ```bash
-PS C:\android\app> keytool -keystore debug.keystore -list -v
+PS C:/the-project/android/app> keytool -keystore debug.keystore -list -v
 Enter keystore password:yer-keystore-password
 Certificate fingerprints:
          SHA1: 21:21:21:21:21:21:21:21:21:21:21:21:21:21:21:21:21:21:21:21
@@ -61,22 +61,6 @@ Paste value into /src/config.json
 
 -------------------------------
 ## Step E
-Add signingConfigs to /android/app/build.gradle after splits and before buildTypes
-
-```gradle
-  splits {}
-  signingConfigs {
-        debug {
-            storeFile file('debug.keystore')
-            storePassword 'yer-keystore-password'
-            keyAlias 'my-key-alias'
-            keyPassword 'yer-keystore-password'
-        }
-    }
-    buildTypes {}
-```
--------------------------------
-## Step F
 Get google-services.json into /android/app/
 
 Go to : https://console.firebase.google.com/project/yer-project-name/settings/general/android:com.yer-project-name
@@ -84,14 +68,14 @@ Go to : https://console.firebase.google.com/project/yer-project-name/settings/ge
   Project | Your Apps | Android Apps | google-services.json | DOWNLOAD file
 
 -------------------------------
-## Step G
+## Step F
 
 Choose support email in yer-project-name
 
 Go to : https://console.firebase.google.com/project/yer-project-name/settings/general/android:com.yer-project-name
 
 -------------------------------
-## Step H
+## Step G
 
 Replace every 'fonecook3' instance in the project with yer-project-name.
 I advise using only lowercase letters and numbers for your project name; no dashes either.
@@ -106,16 +90,23 @@ For example /android/app/build.gradle
 
 
 -------------------------------
+## Step H
+
+PS C:/the-project> yarn install
+
+-------------------------------
 
 ## USB Run:
 
   Bash 1
 
-    PS C:\android\app> yarn start
+    PS C:/the-project> yarn start
 
   Bash 2
 
-    PS C:\android\app> adb devices
+    PS C:/the-project> adb devices
+                            List of devices attached
+                            52109e7dea7f2495        device
                        adb -s 52109e7dea7f2495 reverse tcp:8081 tcp:8081
                        yarn android
 
@@ -124,11 +115,11 @@ For example /android/app/build.gradle
 
   Bash 1
 
-    PS C:\android\app> yarn start
+    PS C:/the-project> yarn start
 
   Bash 2
 
-    PS C:\android\app> yarn android
+    PS C:/the-project> yarn android
 
   Open in browser
     http://localhost:8081/debugger-ui/
