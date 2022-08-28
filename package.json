@@ -1,0 +1,24 @@
+{
+  "name": "fonecook3",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "start": "react-native start"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-decorators": "^7.18.10",
+    "@react-native-firebase/app": "^14.5.0",
+    "@react-native-firebase/auth": "^14.5.0",
+    "@react-native-firebase/perf": "^14.5.0",
+    "@react-native-google-signin/google-signin": "^7.1.0",
+    "react": "^17.0.2",
+    "react-native": "^0.67.4",
+    "react-native-fbsdk-next": "^7.3.2",
+    "react-native-vector-icons": "^9.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.1.6"
+  }
+}

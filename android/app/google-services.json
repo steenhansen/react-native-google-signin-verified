@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "703366983526",
+    "project_id": "fonecook3",
+    "storage_bucket": "fonecook3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703366983526:android:e9d294df2dd19fd3d2a2a7",
+        "android_client_info": {
+          "package_name": "com.fonecook3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "703366983526-gmvlqk75oi39sr3kgeq82shoemuf85vt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fonecook3",
+            "certificate_hash": "21b24925c7ccb16f6388f73d21b23fa96396e756"
+          }
+        },
+        {
+          "client_id": "703366983526-rqp153lgutts5rhlhit133tuv77p0pja.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP0gjlq8AFhWVSZIkfcQIai8Z9PPzEcYM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "703366983526-rqp153lgutts5rhlhit133tuv77p0pja.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

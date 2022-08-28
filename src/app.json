@@ -1,0 +1,5 @@
+{
+  "name": "fonecook3",
+  "displayName": "Verified Google Signin for React Native on Android",
+  "idToken_validate_url": "https://phone-recipes.herokuapp.com/validate-token/"
+}
