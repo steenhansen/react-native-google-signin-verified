@@ -9,12 +9,9 @@ async function signIn(setCurrent_gmail, setUser_id, setId_token) {
   try {
     await GoogleSignin.hasPlayServices();
     const user_info = await GoogleSignin.signIn();
-    //console.log('***signIn', user_info);
     console.log('***signIn', user_info.user.email);
-    //console.log('***signIn id', user_info.user.id);
-    //console.log('***signIn idToken', user_info.idToken);
-    setCurrent_gmail(user_info.user.email)
-    setUser_id(user_info.user.id)
+    setCurrent_gmail(user_info.user.email);
+    setUser_id(user_info.user.id);
     setId_token(user_info.idToken);
   } catch (error) {
     console.log('ERROR - signIn - ', error);
@@ -27,10 +24,12 @@ async function signInSilently(setCurrent_gmail, setUser_id, setId_token) {
     const user_info = await GoogleSignin.signInSilently();
     console.log('***signInSilently', user_info.user.email);
     setCurrent_gmail(user_info.user.email);
-    setUser_id(user_info.user.id)
+    setUser_id(user_info.user.id);
     setId_token(user_info.idToken);
   } catch (error) {
-    console.log('ERROR - signInSilently - ', error);
+    if (error.message !== "SIGN_IN_REQUIRED") {
+      console.log('ERROR - signInSilently - ', error);
+    }
   }
 };
 
