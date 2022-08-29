@@ -40,7 +40,7 @@ Certificate fingerprints:
 ## Step C
 Put SHA1 and SHA256 into  https://console.firebase.google.com/project/yer-project-name/settings/general/android:com.yer-project-name
 
-  Project | Your Apps | Android Apps | Add fingerprint
+Project | Your Apps | Android Apps | Add fingerprint
 
 ![](/C-sha1-sha256-android.png)
 
@@ -92,7 +92,9 @@ For example /android/app/build.gradle
 -------------------------------
 ## Step H
 
+```bash
 PS C:/the-project> yarn install
+```
 
 -------------------------------
 
@@ -100,29 +102,46 @@ PS C:/the-project> yarn install
 
   Bash 1
 
-    PS C:/the-project> yarn start
+```bash
+PS C:/the-project> yarn start
+```
 
   Bash 2
 
-    PS C:/the-project> adb devices
-                            List of devices attached
-                            52109e7dea7f2495        device
-                       adb -s 52109e7dea7f2495 reverse tcp:8081 tcp:8081
-                       yarn android
+```bash
+PS C:/the-project> adb devices
+                   List of devices attached
+                   52109e7dea7f2495        device
+                   7dea7f249552109e        device
 
+                   adb -s 52109e7dea7f2495 reverse tcp:8081 tcp:8081
+
+                   yarn android
+```
 
 ## EMLUATOR Run:
 
   Bash 1
 
-    PS C:/the-project> yarn start
-
+```bash
+PS C:/the-project> yarn start
+```
   Bash 2
 
-    PS C:/the-project> yarn android
+```bash
+PS C:/the-project> yarn android
+```
 
   Open in browser
     http://localhost:8081/debugger-ui/
+
+-------------------------------
+## Release Build
+```bash
+PS C:/the-project/android> ./gradlew assembleRelease
+```
+
+Makes installable APKs that run without USB in [/android/app/build/outputs/apk/release/](/android/app/build/outputs/apk/release/)
 
 -------------------------------
 

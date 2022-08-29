@@ -60,5 +60,23 @@ buck-out/
 /ios/Pods/
 
 # Misc
-build/
+
+android/app/build/crashlytics
+android/app/build/generated
+android/app/build/intermediates
+android/app/build/outputs/apk/debug
+android/app/build/outputs/Bundle
+android/app/build/outputs/logs
+android/app/build/outputs/mapping
+android/app/build/outputs/sdk-dependencies
+android/app/build/tmp
+
+
+
+/build/kotlin
+
+
+
+
+
 scripts/*.log
