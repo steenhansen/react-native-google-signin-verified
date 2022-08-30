@@ -143,6 +143,11 @@ PS C:/the-project/android> ./gradlew assembleRelease
 
 Makes installable APKs that run without USB in [/android/app/build/outputs/apk/release/](/android/app/build/outputs/apk/release/)
 
+The only permission used is Internet.
+```XML
+<uses-permission android:name="android.permission.INTERNET" />
+```
+
 -------------------------------
 
 ## Possible Errors and Fixes
