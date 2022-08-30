@@ -1,7 +1,7 @@
 
 ## Verified Google Signin for React Native on Android
 
-<a name="fast-start"></a>
+
 
 This is a bare bones example of React Native Android using Gmail to
 authenticate a user, and then verify the same user on a Node.js
@@ -17,6 +17,7 @@ Firebase React Native bindings are not used, but are left in place.
 
 
 -------------------------------
+<a name="fast-start"></a>
 
 ## Step A
 Create C:/the-project/android/app/debug.keystore with keytool.exe
