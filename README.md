@@ -7,6 +7,8 @@ This is a bare bones example of React Native Android using Gmail to
 authenticate a user, and then verify the same user on a Node.js
 backend server.
 
+<a name="fast-start"></a>
+
 This example is a stripped down copy of https://github.com/invertase/react-native-firebase-authentication-example
 
 Firebase React Native bindings are not used, but are left in place.
@@ -17,7 +19,7 @@ Firebase React Native bindings are not used, but are left in place.
 
 
 -------------------------------
-<a name="fast-start"></a>
+
 
 ## Step A
 Create C:/the-project/android/app/debug.keystore with keytool.exe
