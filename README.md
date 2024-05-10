@@ -1,6 +1,7 @@
 
 ## Verified Google Signin for React Native on Android
 
+<a name="s"></a>
 <a name="fast-start"></a>
 
 This is a bare bones example of React Native Android using Gmail to
